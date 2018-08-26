@@ -1,0 +1,17 @@
+.register-form > div{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.register-form h2 {
+  font-size: 16px;
+  margin: 0 auto;
+}
+
+.register-form button {
+  background-color: #4579D0;
+  color: white;
+  margin: 10px auto;
+}
+
