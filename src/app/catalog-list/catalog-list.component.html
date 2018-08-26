@@ -5,10 +5,10 @@
     <span>email</span>
     <span>telefone</span>
   </div>
-  <div class="list-body">
-      <span>{{register.id}}</span>
-      <span>{{register.name}}</span>
-      <span>{{register.email}}</span>
-      <span>{{register.telefone}}</span>
-    </div>
+  <div class="list-body" *ngFor="let catalog of catalogs">
+    <span>{{catalog.id}}</span>
+    <span>{{catalog.name}}</span>
+    <span>{{catalog.email}}</span>
+    <span>{{catalog.telefone}}</span>
+  </div>
 </div>

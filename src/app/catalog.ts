@@ -1,6 +1,6 @@
 export class Catalog {
   id: number;
-  name: string;
+  nome: string;
   email: string;
-  telefone: number
+  telefone: string
 }
