@@ -6,12 +6,13 @@ import { HttpClient } from '@angular/common/http'
   templateUrl: './catalog-list.component.html',
   styleUrls: ['./catalog-list.component.css']
 })
+
 export class CatalogListComponent{
-  catalogos;
+  catalogos = [];
   constructor(public http: HttpClient) { 
     this.http.get('http://localhost:5000/get_records')
       .subscribe((dados) => {
-        this.catalogos = dados;
+        this.catalogos = [dados]
         console.log(dados);
       })
   }

@@ -7,13 +7,15 @@ import { HttpClient } from "@angular/common/http";
   styleUrls: ['./add-register-form.component.css']
 })
 export class AddRegisterFormComponent {
-  dados;
-  constructor() { }
-  // send(){
-  //   this.http.post('http://localhost:5000/insert_record', this.dados)
-  //     .subscribe(() => {
-  //       alert('Os dados foram salvos!');
-  //     });
-  // }
+  dados = {};
+
+  constructor(public http:HttpClient) { }
+
+  send(){
+    this.http.post('http://localhost:5000/insert_record', this.dados)
+      .subscribe(() => {
+        alert('Os dados foram salvos!');
+      });
+  }
 
 }
