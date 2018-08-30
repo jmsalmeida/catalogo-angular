@@ -1,10 +1,10 @@
-<form class="register-form">
+<form class="register-form" (submit)="onSubmit()">
   <div class="container">
     <h2>Adicionar mais itens a lista: </h2>
-    <input type="text" placeholder="Name" required/>
-    <input type="email" placeholder="Email" required/>
-    <input type="tel" placeholder="Telefone" required/>
-    <button (click)="send()" class="mdl-button mdl-js-button mdl-button--raised">
+    <input #inputName type="text" placeholder="Name" required/>
+    <input #inputEmail type="email" placeholder="Email" required/>
+    <input #inputTel type="tel" placeholder="Telefone" required/>
+    <button type="button" (click)="send()" class="mdl-button mdl-js-button mdl-button--raised">
       Adicionar
     </button>
   </div>

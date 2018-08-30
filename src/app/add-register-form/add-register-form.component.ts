@@ -8,14 +8,24 @@ import { HttpClient } from "@angular/common/http";
 })
 export class AddRegisterFormComponent {
   dados = {};
-
-  constructor(public http:HttpClient) { }
-
-  send(){
-    this.http.post('http://localhost:5000/insert_record', this.dados)
-      .subscribe(() => {
-        alert('Os dados foram salvos!');
-      });
+  constructor(public http: HttpClient) { }
+  refresh(): void {
+    window.location.reload();
   }
 
+  send() {
+    const req =
+      this.http.post('http://localhost:5000/insert_record', {
+        nome: "DadoTeste",
+        email: "dado@gmail.com",
+        telefone: "11 9087-8976"
+      }).subscribe(
+        res => {
+          this.refresh();
+        },
+        err => {
+          console.log("Error ocurred");
+        }
+      )
+  }
 }

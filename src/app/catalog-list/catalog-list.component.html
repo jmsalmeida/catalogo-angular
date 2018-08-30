@@ -1,23 +1,14 @@
-<!-- <ul>
-  <li *ngFor="let dado of catalogos">
-    {{catalogo.id}}
-    {{catalogo.nome}}
-    {{catalogo.email}}
-    {{catalogo.telefone}}
-  </li>
-</ul> -->
-<!-- <tr>
-  <td>id</td>
-  <td>nome</td>
-  <td>email</td>
-  <td>telefone</td>
-</tr>
-<tr *ngFor="let catalogo of catalogos">
-  <th>{{catalogo.id}}</th>
-  <th>{{catalogo.nome}}</th>
-  <th>{{catalogo.email}}</th>
-  <th>{{catalogo.telefone}}</th>
-</tr> -->
-<!-- <li *ngFor="let catalogo of catalogos ">
-    {{ catalogo.nome }}
-</li> -->
+<table class="container catalog-list">
+    <tr>
+        <th>nome</th>
+        <th>email</th>
+        <th>telefone</th>
+      </tr>
+      <tr *ngFor="let catalogo of catalogos">
+        <td>{{catalogo.nome}}</td>
+        <td>{{catalogo.email}}</td>
+        <td>{{catalogo.telefone}}</td>
+      </tr>
+</table>
+
+
